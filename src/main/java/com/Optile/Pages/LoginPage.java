@@ -36,7 +36,7 @@ public class LoginPage  extends Testng {
 		String InvalidUsername= Logindata.get("InvalidUsername");
 		String InvalidPassword= Logindata.get("InvalidPassword");
 	
-		//This is for Launching Saloodo site and inside this method Detailed Report code is available.
+		//This is for Launching Dropbox and inside this method Detailed Report code is available.
 		actions.browserLaunch(Logindata.get("URL_Data"), driver, TempResultFile, "Launching Browser");
 
 
@@ -44,6 +44,7 @@ public class LoginPage  extends Testng {
 
 		if(source.contains("xml:lang=\"de\""))
 		{
+			//clicking on signin button based on german page or english page
 			actions.Click("GermanSignInButton", "GermanSignInButton", "SignIn button", driver, TempResultFile, "Clicking on Sign In");
 
 			actions.Click("LoginInButton", "LoginInButton", "Login Button", driver, TempResultFile, "Clicking on Login Button");

@@ -52,7 +52,7 @@ public class OptileTask extends Testng{
 	public void OpticalTaskLogin() 
 	{
 		try {
-
+			// loginf to the application
 			login.Login();
 		}catch(Exception e)
 		{
@@ -65,9 +65,9 @@ public class OptileTask extends Testng{
 	public void uploadFileFunctionality()
 	{
 		try {
-
+			// uploading folder
 			file.uploadFileFunctionality();
-			
+			//for external report purpose
 			Report.FinalResultWrite(TempResultFile,"uploadFileFunctionality",CurrentFileName);
 			Report.InsertOverallStatus(TempResultFile,"uploadFileFunctionality",CurrentFileName);
 		
@@ -86,13 +86,14 @@ public class OptileTask extends Testng{
 	{
 
 		try {
-
+			// creating folder
 			folder.createFolderFunctionality();
 			
 			actions.Click("UserIcon", "UserIcon", "UserIcon", driver, TempResultFile, "Clicking on User Icon");
 
 			actions.Click("Logout", "Logout", "Logout Button", driver, TempResultFile, "Clicking on Logout Button");
 			
+			//for external report purpose
 			Report.FinalResultWrite(TempResultFile,"createFolderFunctionality",CurrentFileName);
 			Report.InsertOverallStatus(TempResultFile,"createFolderFunctionality",CurrentFileName);
 
@@ -107,9 +108,10 @@ public class OptileTask extends Testng{
 	public void createDeleteFolderFunctionality()
 	{
 		try {
-
+			// creating and deleting folder
 			folder.createDeleteFolderFunctionality();
 			
+			//for external report purpose
 			Report.FinalResultWrite(TempResultFile,"createDeleteFolderFunctionality",CurrentFileName);
 			Report.InsertOverallStatus(TempResultFile,"createDeleteFolderFunctionality",CurrentFileName);
 		
@@ -126,9 +128,10 @@ public class OptileTask extends Testng{
 	public void renameCreatedFolderFunctionality() 
 	{
 		try {
-
+			//creating and renaming the folder
 			folder.renameCreatedFolderFunctionality();
 			
+			//for external report purpose
 			Report.FinalResultWrite(TempResultFile,"renameCreatedFolderFunctionality",CurrentFileName);
 			Report.InsertOverallStatus(TempResultFile,"renameCreatedFolderFunctionality",CurrentFileName);
 		

@@ -39,12 +39,12 @@ public class UploadFolder extends Testng {
 	
 	
 
-		//This is for Launching Saloodo site and inside this method Detailed Report code is available.
+		//This is for Launching Dropbox and inside this method Detailed Report code is available.
 		actions.browserLaunch(Logindata.get("URL_Data"), driver, TempResultFile, "Launching Browser");
 
 
 		String source =actions.pageSource(driver);
-
+		//clicking on signin button based on german page or english page
 		if(source.contains("xml:lang=\"de\""))
 		{
 			actions.Click("GermanSignInButton", "GermanSignInButton", "SignIn button", driver, TempResultFile, "Clicking on Sign In");
@@ -55,9 +55,9 @@ public class UploadFolder extends Testng {
 			actions.Click("EnglishSignInButton", "EnglishSignInButton", "SignIn button", driver, TempResultFile, "Clicking on Sign In");
 
 		}
-
+		// loging to the application
 		login.loginUser(Username,Password);
-
+		// verifying user logged to application
 		login.VerifyUserLogged();
 
 		String FolderName = createFolder();
@@ -135,12 +135,12 @@ public class UploadFolder extends Testng {
 		String Password= Logindata.get("Password");
 	
 
-		//This is for Launching Saloodo site and inside this method Detailed Report code is available.
+		//This is for Launching Dropbox and inside this method Detailed Report code is available.
 		actions.browserLaunch(Logindata.get("URL_Data"), driver, TempResultFile, "Launching Browser");
 
 
 		String source =actions.pageSource(driver);
-
+		//clicking on signin button based on german page or english page
 		if(source.contains("xml:lang=\"de\""))
 		{
 			actions.Click("GermanSignInButton", "GermanSignInButton", "SignIn button", driver, TempResultFile, "Clicking on Sign In");
@@ -151,26 +151,27 @@ public class UploadFolder extends Testng {
 			actions.Click("EnglishSignInButton", "EnglishSignInButton", "SignIn button", driver, TempResultFile, "Clicking on Sign In");
 
 		}
-
+		// loging to the application
 		login.loginUser(Username,Password);
-
+		//verifying user logged to application
 		login.VerifyUserLogged();
 
-
+		// deleting folder
 		deleteCreatedFolderFunctionality();
 
-
+		// loging out from application
 		actions.Click("UserIcon", "UserIcon", "UserIcon", driver, TempResultFile, "Clicking on User Icon");
 
 		actions.Click("Logout", "Logout", "Logout Button", driver, TempResultFile, "Clicking on Logout Button");
 
 
 	}
+	// deleting created folder
 	public void deleteCreatedFolderFunctionality() throws Exception
 	{
-
+		// creating folder
 		String FolderName =createFolder();
-
+		// clicking on my files
 		actions.Click("MyFiles", "MyFiles", "MyFiles", driver, TempResultFile, "Clicking on MyFiles");
 
 		ObjectProprtyValue=ScriptExecuter.ObjproperteyValue.get("UploadedFolderName");
@@ -222,6 +223,7 @@ public class UploadFolder extends Testng {
 		}
 
 	}
+	// renaming created folder
 	public void renameCreatedFolderFunctionality() throws Exception
 	{
 		
@@ -256,7 +258,7 @@ public class UploadFolder extends Testng {
 				Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
 
 				Thread.sleep(1000);
-
+				// using robot class for the renaming fie
 				Robot robot = new Robot();
 
 				robot.keyPress(KeyEvent.VK_CONTROL);

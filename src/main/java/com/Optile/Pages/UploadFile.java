@@ -36,12 +36,12 @@ public class UploadFile extends Testng{
 		String Username= Logindata.get("Username");
 		String Password= Logindata.get("Password");
 	
-		//This is for Launching Saloodo site and inside this method Detailed Report code is available.
+		//This is for Launching Dropbox and inside this method Detailed Report code is available.
 		actions.browserLaunch(Logindata.get("URL_Data"), driver, TempResultFile, "Launching Browser");
 
 
 		String source =actions.pageSource(driver);
-
+		//clicking on signin button based on german page or english page
 		if(source.contains("xml:lang=\"de\""))
 		{
 			actions.Click("GermanSignInButton", "GermanSignInButton", "SignIn button", driver, TempResultFile, "Clicking on Sign In");

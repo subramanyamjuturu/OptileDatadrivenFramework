@@ -40,3 +40,21 @@ to open data sheet please follow Path of the Data file in the project folder -\\
 Open the excel file and click on Scenerio sheet, you can find the method names from the 2nd row under methodname column and click on results cell which is parallel to method names, Automatically result will be opened in a default browser in html format.
 
 Note: update Username and password in the LoginPage sheet in the OptileTask_Data.xls excelsheet which is placed under OptileTask folder under data folder in the OptileTask project.
+
+Results file Description:
+•	On the top of result (i.e. in the Header session) we can find the Path of the result folder, execution date, execution time
+•	Below to Header session we can find the Complete execution report with detailed description as follows
+•	Detailed Description for execution report
+	•	Module: This column indicates the execution steps
+	•	Expected Value : This column indicates that what all expected things need to be done at that step
+	•	Task : Kind of action indicates at that step
+	•	Actual Value : This column indicates that what are the actual things present on UI
+	•	Status : This column shows whether that step is pass or fail
+	•	Pass or Fail :  By clicking on pass or fail, we can view the screenshot for reference
+•	At the end of the report we can find execution end date, execution end time, overall time taken for execution
+
+Note: The entire scripts are written in Selenium using java programming language, we can see the logic of the code by navigating to those methods (i.e.by pressing F3 key on that method in eclipse). 
+The code is designed by taking following advantages into consideration:
+•	Reusability of code
+•	Hide the complexity of code
+•	Customized detailed description of output result
