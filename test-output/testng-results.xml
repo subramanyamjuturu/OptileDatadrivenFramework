@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="160520" started-at="2018-09-05T08:16:48Z" finished-at="2018-09-05T08:19:29Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="160520" started-at="2018-09-05T08:16:48Z" finished-at="2018-09-05T08:19:29Z">
+      <class name="com.Optical.TestNg.Testng">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.Optical.TestNg.Testng@77f99a05]" name="beforeClass" is-config="true" duration-ms="160500" started-at="2018-09-05T08:16:48Z" finished-at="2018-09-05T08:19:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="f()[pri:0, instance:com.Optical.TestNg.Testng@77f99a05]" name="f" duration-ms="4" started-at="2018-09-05T08:19:29Z" finished-at="2018-09-05T08:19:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+      </class> <!-- com.Optical.TestNg.Testng -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
